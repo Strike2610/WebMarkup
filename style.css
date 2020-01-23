@@ -1,0 +1,44 @@
+:root {
+	--textColor: #000000;
+	--FooterBackgroundColor: #444444;
+	--color3: #707070;
+	--headerBackground: #aaaaaa;
+	--color5: #f5f5f5;
+	--backgroundColor: #ffffff;
+	--headerColor: #2699fb;
+}
+
+body {
+	background-color: var(--backgroundColor);
+	color: var(--textColor);
+	display: grid;
+	margin: 0;
+	grid-gap: 2%;
+	grid-template:
+		'nav'
+		'content'
+		'footer';
+}
+
+nav {
+	grid: nav;
+	background: var(--headerColor);
+}
+
+section {
+	grid: content;
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	background-color: var(--headerBackground);
+}
+
+footer {
+	grid: footer;
+	height: 100px;
+	padding: 0;
+	margin: 0;
+	background-color: var(--FooterBackgroundColor);
+}
