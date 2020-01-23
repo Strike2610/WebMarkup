@@ -25,6 +25,48 @@ nav {
 	background: var(--headerColor);
 }
 
+nav ul {
+	float: right;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+h1 {
+	float: left;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 27px;
+	position: relative;
+}
+
+nav a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--textColor);
+}
+
+nav a::before {
+	content: '';
+	display: block;
+	height: 5px;
+	width: 100%;
+	background-color: var(--backgroundColor);
+
+	position: absolute;
+	top: 0;
+	width: 0%;
+
+	transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+	width: 100%;
+}
+
 section {
 	grid: content;
 	padding: 0;
