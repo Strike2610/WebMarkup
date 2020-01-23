@@ -13,15 +13,17 @@ body {
 	color: var(--textColor);
 	display: grid;
 	margin: 0;
-	grid-gap: 2%;
-	grid-template:
-		'nav'
-		'content'
-		'footer' 100px;
+	grid-gap: 1%;
+	grid-template-columns: 80% 19%;
+	grid-template-rows: 75px auto 100px;
+	grid-template-areas:
+		'nav nav'
+		'content side'
+		'footer footer';
 }
 
 nav {
-	grid: nav;
+	grid-area: nav;
 	background: var(--headerColor);
 	padding: 0 3%;
 }
@@ -68,8 +70,13 @@ nav a:hover::before {
 	width: 100%;
 }
 
+aside {
+	grid-area: side;
+	background-color: var(--color3);
+}
+
 section {
-	grid: content;
+	grid-area: content;
 	padding: 0;
 	margin: 0;
 }
@@ -79,7 +86,7 @@ header {
 }
 
 footer {
-	grid: footer;
+	grid-area: footer;
 	padding: 0;
 	margin: 0;
 	background-color: var(--FooterBackgroundColor);
