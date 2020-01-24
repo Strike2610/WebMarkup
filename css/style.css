@@ -8,16 +8,6 @@
 	--blue: #2699fb;
 }
 
-code {
-	font-family: 'Fira Code', monospace;
-}
-
-@supports (font-variation-settings: normal) {
-	code {
-		font-family: 'Fira Code VF', monospace;
-	}
-}
-
 body {
 	background-color: var(--white);
 	color: var(--black);
