@@ -150,6 +150,11 @@ aside img {
 	height: 20em;
 }
 
+article>footer {
+	bottom: 0;
+	position: relative;
+}
+
 /* contact styling */
 
 h6 {
@@ -175,6 +180,10 @@ body > footer {
 	margin: 0;
 	background-color: var(--nearBlack);
 	color: var(--nearWhite);
+}
+
+.end p {
+	float: left;
 }
 
 .cookie {
