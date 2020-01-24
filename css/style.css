@@ -1,32 +1,49 @@
 :root {
-	--textColor: #000000;
-	--FooterBackgroundColor: #444444;
-	--color3: #707070;
-	--headerBackground: #aaaaaa;
-	--FooterTextColor: #f5f5f5;
-	--backgroundColor: #ffffff;
-	--headerColor: #2699fb;
+	--black: #000000;
+	--nearBlack: #444444;
+	--darkGrey: #707070;
+	--lightGrey: #aaaaaa;
+	--nearWhite: #f5f5f5;
+	--white: #ffffff;
+	--blue: #2699fb;
+	--fallbackFontH1: arial 80px;
+	--fallbackFontH1: arial 63px;
+	--fallbackFontH1: arial 35px;
+	--fallbackFontH1: arial bold 30px;
+	--fallbackFontH1: arial 30px;
+	--fallbackFontH1: arial 25px;
+	--fallbackFontH1: arial 15px;
+	--fallbackFontH1: "Berlin Sans FB" 80px;
+	
 }
 
 body {
-	background-color: var(--backgroundColor);
-	color: var(--textColor);
+	background-color: var(--white);
+	color: var(--black);
 	display: grid;
 	margin: 0;
 	grid-gap: 1%;
 	grid-template-columns: 10% 78% 10%;
 	align-content: center;
-	grid-template-rows: 75px auto 100px;
+	grid-template-rows: 5em auto 6em;
 	grid-template-areas:
 		'nav nav nav'
 		'. contents .'
 		'footer footer footer';
 }
 
+/* nav bar styling */
+
 nav {
 	grid-area: nav;
-	background: var(--headerColor);
+	background: var(--blue);
 	padding: 0 3%;
+}
+
+h1 {
+	float: left;
+	font-size: 2em;
+	margin-top: 0.5em;
 }
 
 nav ul {
@@ -36,31 +53,25 @@ nav ul {
 	list-style: none;
 }
 
-h1 {
-	float: left;
-	font-size: 32px;
-	margin-top: 20px;
-}
-
 nav li {
 	display: inline-block;
-	margin-left: 70px;
-	padding-top: 27px;
+	margin-left: 3em;
+	padding-top: 1.75em;
 	position: relative;
 }
 
 nav a {
 	text-decoration: none;
 	text-transform: uppercase;
-	color: var(--textColor);
+	color: var(--black);
 }
 
 nav a::before {
 	content: '';
 	display: block;
-	height: 5px;
+	height: 0.3em;
 	width: 100%;
-	background-color: var(--backgroundColor);
+	background-color: var(--black);
 
 	position: absolute;
 	top: 0;
@@ -73,34 +84,105 @@ nav a:hover::before {
 	width: 100%;
 }
 
+/* content styling */
+
 main {
 	grid-area: contents;
 }
 
-main>header {
-	font-size: 24px;
-	background-color: var(--headerBackground);
+main > header {
+	background-color: var(--lightGrey);
+	margin-left: 0.5em;
+}
+
+article > img {
+	width: 25em;
+	margin: 0 1em 1em 0;
+}
+
+article > img:nth-child(odd) {
+	float: left;
+	box-shadow: 0.5em 0.5em 1em 0 rgba(0, 0, 0);
+}
+
+article > img:nth-child(even) {
+	float: right;
+	box-shadow: -0.5em 0.5em 1em 0 rgba(0, 0, 0);
+}	
+
+main > article {
+	margin-bottom: 3em;
+	overflow: auto;
 }
 
 p {
-	width: 80%;
-	margin: 10px;
+	margin: 1em;
 }
 
-img {
-	max-width: 100px;
-	max-height: 100px;
+/* dojo styling */
+
+section > header {
+	font-size: 1.25em;
+	margin-bottom: 1em;
 }
+
+a > img {
+	height: 7em;
+	margin-bottom: 1em;
+	float: right;
+	clear: both;
+}
+
+article > section {
+	margin: 1em;
+	overflow: auto;
+	border: 0.1em solid var(--black);
+	padding: 0.5em;
+}
+
+/* referal styling */
 
 aside {
-	grid-area: side;
-	background-color: var(--color3);
+	float: right;
 }
 
-body>footer {
+aside img {
+	height: 20em;
+}
+
+/* contact styling */
+
+h6 {
+	margin: 0;
+	color: var(--darkGrey);
+}
+
+input,
+label,
+textarea {
+	width: 100%;
+}
+
+textarea {
+	min-height: 10em;
+}
+
+/* footer styling */
+
+body > footer {
 	grid-area: footer;
 	padding: 0;
 	margin: 0;
-	background-color: var(--FooterBackgroundColor);
-	color: var(--FooterTextColor);
+	background-color: var(--nearBlack);
+	color: var(--nearWhite);
+}
+
+.cookie {
+	z-index: 999;
+	position: fixed;
+	width: 100%;
+	height: 3em;
+	text-align: center;
+	bottom: 0;
+	left: 0;
 }
