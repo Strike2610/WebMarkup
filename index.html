@@ -1,9 +1,3 @@
-<!--
-    bij-nederland.nl
-    Nederland
-    Netherlands (why should a tourist, visit the Netherlands)
--->
-
 <!DOCTYPE html>
 <html lang="nl">
 	<head>
@@ -35,7 +29,10 @@
 		</nav>
 		<main>
 			<!--
-				Beide main en secondary content 
+				Beide main en secondary content zijn als volgd ingedeeld:
+				Header: de titel van het stuk en link er naartoe
+				Img: beide images staan er boven zodat in het CSS dit om de text heen gezet kan worden
+				P: de paragraven met text
 			-->
 			<header id="maincontent">
 				<h2>Nederland</h2>
@@ -88,17 +85,17 @@
 					genoeg plekken om uit te gaan en nieuwe ervaringen op te doen.
 				</p>
 			</article>
+			<!--
+				Elke dojo is als volgd ingedeeld:
+				Header: naam van de dojo
+				Article: korte onschrijving
+				Footer: logo van en link naar de dojo
+			-->
 			<header id="sportcontent">
 				<h2>Jiu Jitsu</h2>
 			</header>
 			<h3>Klik op de logo's om naar de relevante website te gaan.</h3>
 			<article>
-				<!--
-					Elke dojo is als volgd ingedeeld:
-					Header: naam van de dojo
-					Article: korte onschrijving
-					Footer: logo van en link naar de dojo
-				-->
 				<section>
 					<header>
 						Apex
@@ -254,16 +251,23 @@
 					</footer>
 				</section>
 			</article>
+			<!--
+				Een kleine ode aan de geweldige leraar die dit project runt:
+				Aside: deze staat ernaast zodat in het CSS deze rechts van de text gezet kan worden
+				Header: de naam van de docent
+				P: de ode
+				Footer: een kleine vraag om een voldoende ;)
+			-->
 			<header id="referalcontent">
 				<h2>Docent bij dag, trainer bij nacht</h2>
 			</header>
 			<article>
-				<header><h3>M. van der Meer</h3></header>
 				<aside>
 					<a href="https://www.taekwon.nl/brazilian-jiu-jitsu/">
 						<img src="img/sabeom.png" alt="Trainer M. van der Meer" />
 					</a>
 				</aside>
+				<header><h3>M. van der Meer</h3></header>
 				<p>
 					Deze opdracht is opgezet door M. van der meer, een informatica docent
 					op Inholland Haarlem.
@@ -280,14 +284,23 @@
 				</p>
 
 				<p>
-					Ik hoop dat u (de lezer) dit een aangename website vond en nergens tegenaan bent gelopen, als u een opmerking kwijt wilt of een vraag heeft, kan dit hier onder.
+					Ik hoop dat u (de lezer) dit een aangename website vond en nergens
+					tegenaan bent gelopen, als u een opmerking kwijt wilt of een vraag
+					heeft, kan dit hier onder.
 				</p>
 				<footer>
 					<h5>
-						En ik hoop dat de docent hier ook tevreden mee is zodat ik dit project succesvol kan afronden.
+						En ik hoop dat de docent hier ook tevreden mee is zodat ik dit
+						project succesvol kan afronden.
 					</h5>
 				</footer>
 			</article>
+			<!--
+				Een test formulier om een vraag te stellen oid:
+				Bestaande uit een naam, email en bericht veld
+				Met een <label> voor elk en in een <fieldset> zodat er een rand omheen zit
+				De <legend> is zodat deze rand een break heeft met daarin de naam van het formulier
+			-->
 			<header id="contactcontent">
 				<h2>Contact</h2>
 			</header>
@@ -306,16 +319,21 @@
 				</fieldset>
 			</form>
 		</main>
+		<!--
+			2 footers:
+			De 1ste voor de copyright die altijd onderaan de pagina blijft
+			En de 2e voor een overbodige cookie warning die altijd in beeld blijft
+		-->
 		<footer class="end">
 			<p>
 				Copyright &copy; 2020 Tymo Wessel || All rights reserved.
 			</p>
-		</footer> <!--
+		</footer>
 		<footer class="cookie">
 			<p>
 				PAS OP: Deze website gebruikt geen cookies maar er werd gevraagd of ik
 				alsnog een disclaimer in mijn project wilde zetten!
 			</p>
-		</footer> -->
+		</footer>
 	</body>
 </html>
